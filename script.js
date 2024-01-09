@@ -23,11 +23,25 @@ function contar(){
         inicio = Number(inicio)
         fim = Number(fim)
         passo = Number(passo)
-        while (inicio <= fim){
-            x.append(`${inicio} 👉`)
-            inicio += passo
+
+        if (inicio > fim){
+            while (inicio >= fim){
+                x.append(`${inicio} 👉`)
+                inicio -= passo
+            }
+            x.append('👏')    
+
+
+        }else{
+            while (inicio <= fim){
+                x.append(`${inicio} 👉`)
+                inicio += passo
+            }
+            x.append('👏')  
+
         }
-        x.append('👏')    
+
+          
 
         
     }
